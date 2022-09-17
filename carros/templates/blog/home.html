@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        {% load static %}
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+        <title>Home</title>
+    </head>
+    <body>
+
+        <header id="cabecalho">
+            <h1>Cadastro de carros</h1>
+        </header>
+
+        <main id="conteudo">
+        <br/>
+        <ul id="lista_carros">
+            <li id="titulos_carros">
+                <p>Marca</p>
+                <p>Modelo</p>
+                <p>Ano</p>
+                <p>Preço</p>
+            </li>
+            {% for carro in Carros %}
+
+            <li id="carro">
+ 
+                <a href="{% url 'list_one_car' carro.id %}"
+                    >{{ carro.marca }}</a
+                >
+                <a href="{% url 'list_one_car' carro.id %}"
+                    >{{ carro.modelo }}</a
+                >
+                <a href="{% url 'list_one_car' carro.id %}"
+                    >{{ carro.ano }}</a
+                >
+                <a href="{% url 'list_one_car' carro.id %}"
+                    >R$ {{ carro.preco }}</a>
+
+            </li>
+
+            {% endfor %}
+        </ul>
+        <form id="form_botao" action="{% url 'create_car' %}">
+            <input type="submit" value="Adicionar"/>
+        </form>
+
+        </main>
+
+        <footer id="rodape">
+            <p>PRODUZIDO POR LUCAS BEZERRA - FÁBRICA DE SOFTWARE - UNIPÊ</p><br>
+        </footer>
+
+    </body>
+</html>

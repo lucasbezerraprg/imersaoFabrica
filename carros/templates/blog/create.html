@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>Create</title>
+</head>
+<body>
+    <header id="cabecalho">
+        <h1 class="lista">Cadastre seu carro</h1>
+    </header>
+    <main id="conteudo">
+    <br>
+    <form id="cadastro_carro" method="post">
+
+        {% csrf_token %}
+        {{ form.as_p }}
+        
+        <input id="botao_enviar" type="submit" value="Enviar">
+        <a id="botao_home" href="/">Home</a>
+        <br>    
+    </form>
+    </main>
+
+    <footer id="rodape">
+        <p>PRODUZIDO POR LUCAS BEZERRA - FÁBRICA DE SOFTWARE - UNIPÊ</p>
+    </footer>
+
+</body>
+</html>

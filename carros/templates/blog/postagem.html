@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        {% load static %}
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+        <title>{{ carros.marca }}</title>
+    </head>
+    <body>
+        <header id="cabecalho">
+            <h1 class="lista">Sobre seu carro</h1>
+        </header>
+
+        <main id="conteudo">
+        <h2 class="modelo_carro">{{ carros.modelo }}</h2>
+        <div id="config_carros">
+            <p><span>Marca: </span>{{ carros.marca }}</p>
+            <p><span>Modelo: </span>{{ carros.modelo }}</p>
+            <p><span>Ano: </span>{{ carros.ano }}</p>
+            <p><span>Preço: </span>R$ {{ carros.preco }}</p>
+            <p><span>Comentario: </span>{{ carros.comentario }}.</p>
+        </div>
+
+        <br />
+        <form method="GET">
+            {% csrf_token %} {{ form.as_p }}
+            
+        </form>
+            <a id="botao_home" href="{% url 'update_car' carros.id %}">Editar</a>
+            <form id="botao_delete" action="{% url 'delete_car' carros.id %}"><input type="submit" value="Delete" /></form>
+            <a id="botao_home" href="/">Home</a>
+        </main>
+
+        <footer id="rodape">
+            <p>PRODUZIDO POR LUCAS BEZERRA - FÁBRICA DE SOFTWARE - UNIPÊ</p>
+        </footer>
+
+    </body>
+</html>

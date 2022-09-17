@@ -1,0 +1,150 @@
+
+#cabecalho{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: whitesmoke;
+    background-color:#44475a;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    border-bottom: 2px solid whitesmoke;
+}
+
+#conteudo{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color:#44475a;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: whitesmoke;
+}
+
+#lista_carros{
+    width: 90vw;
+    margin: 0 auto;
+    border: 1px solid whitesmoke;
+}
+
+#titulos_carros{
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    background-color: #44475a;
+}
+
+#titulos_carros p{
+    border: 1px solid whitesmoke;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    color: whitesmoke;
+}
+
+#carro{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#carro a{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border: 1px solid whitesmoke;
+    color: whitesmoke;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    background-color: #44475a;
+}    
+
+#form_botao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px ;
+}
+
+#form_botao input{
+    background-color: whitesmoke;
+    cursor: pointer;
+    width: 70px;
+    height: 35px;
+    border-radius: 4px;
+    color: #44475a;
+}
+
+#botao_home{
+    background-color: whitesmoke;
+    color: #44475a;
+    border: 1px solid whitesmoke;
+    border-radius: 2px;
+    margin: 0 auto;
+}
+
+.modelo_carro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    color: whitesmoke;
+    font-size: 35px;
+}
+
+#config_carros{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: whitesmoke;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+
+#botao_delete{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+}
+
+#rodape{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 100vw;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    border-top: 2px solid whitesmoke ;
+    color: whitesmoke;
+    
+}
+
+#botao_enviar{
+    margin: 10px;
+}
+
+#cadastro_carro{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 100px;
+}
+
+#atualize_carro{
+    display: flex;
+    justify-content: space-around ;
+    align-items: center;
+    margin: 100px;
+    color: whitesmoke;
+}
+
+#botao_salvar{
+    margin: 10px;
+}
+
